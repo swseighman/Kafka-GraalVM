@@ -1,4 +1,4 @@
-# Basic Kafka Producer/Consumer Example Using GraalVM Native Image
+# Kafka Producer/Consumer Using GraalVM Native Image
 
 ### Credits
 
