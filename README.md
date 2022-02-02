@@ -1,4 +1,4 @@
-# Basic Kafka Example Using GraalVM Native Image
+# Basic Kafka Producer/Consumer Example Using GraalVM Native Image
 
 ### Credits
 
@@ -44,6 +44,8 @@ $ mvn clean package
 [INFO] ------------------------------------------------------------------------
 ```
 When completed, both the `producer` and `consumer` applications will have been created.
+
+
 ```
 $ ls -lh producer/target/producer-0.0.1-SNAPSHOT.jar
 -rw-r--r-- 1 user user 26M Feb  2 14:46 producer-0.0.1-SNAPSHOT.jar
@@ -52,12 +54,14 @@ $ ls -lh consumer/target/consumer-0.0.1-SNAPSHOT.jar
 -rw-r--r-- 1 user user 26M Feb  2 14:47 consumer-0.0.1-SNAPSHOT.jar
 ```
 
-Of course, you can run each of the executable JAR files to test your Kafka server is writing and reading records:
+Of course, you can run each of the executable JAR files to test your Kafka server is writing and reading records as expected.
 
+Run the Producer:
 ```
 $ java -jar producer/target/producer-0.0.1-SNAPSHOT.jar
 ```
 
+Run the Consumer:
 ```
 $ java -jar consumer/target/consumer-0.0.1-SNAPSHOT.jar
 ```
@@ -87,7 +91,11 @@ Now we can build the `producer` native image exectuable:
 $ mvn package -Pnative -DskipTests
 ```
 
-We'll repeat the same process for the `consumer` application.
+We'll repeat the same process for the `consumer` application. First, restart the `producer`:
+
+```
+$ java -jar target/producer-0.0.1-SNAPSHOT-exec.jar
+```
 
 Change to the `consumer` directory:
 
