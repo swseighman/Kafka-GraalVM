@@ -149,3 +149,7 @@ $ target/consumer
 The `consumer` is now reading records from the topic:
 
 ![](images/kafka-example-2.png)
+
+### Summary
+
+In this basic lab, we created simple Kafka producer/consumer applications using Spring Boot and then compiled those clients into native image executables (which start lightning fast).  We also demonstrated how the tracing agent creates configuration files that are automatically passed to the `native-image` tool at build time to streamline the build process.
