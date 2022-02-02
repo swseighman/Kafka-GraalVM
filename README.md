@@ -4,6 +4,17 @@
 
 The following lab is based on an [article/example](https://itnext.io/event-driven-architectures-with-kafka-and-java-spring-boot-revision-1-c0d43d103ee7) from Tobias Wissmueller.
 
+### Getting Started
+
+To begin, clone this repository:
+
+```
+$ git clone https://github.com/swseighman/Kafka-GraalVM.git
+```
+
+```
+$ cd Kafka-GraalVM
+```
 
 ### Configuring and Starting Kafka/Zookeeper
 
