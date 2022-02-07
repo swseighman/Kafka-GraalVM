@@ -46,5 +46,5 @@ public class ConsumerConfiguration {
     return TopicBuilder.name("timestamp")
                        .build();
   }
-
+  
 }

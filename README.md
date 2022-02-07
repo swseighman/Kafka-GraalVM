@@ -35,6 +35,8 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED        
 
 Great, our Kafka/Zookeeper servers are up and running.
 
+You can choose to use your existing Kafka environment, just make certain you're using standard ports (9092/2181).
+
 ### Building the Project
 
 From the project root directory, execute the following Maven command:
@@ -78,7 +80,7 @@ $ java -jar consumer/target/consumer-0.0.1-SNAPSHOT.jar
 ```
 
 
-#### Compiling  Native Image Executables
+### Compiling  Native Image Executables
 Since native images are built ahead of runtime and their build relies on a static analysis of which code will be reachable, we'll use the GraalVM tracing agent (which tracks all usage of dynamic features of an execution on a regular Java VM) to prepare configuration files for the `native-image` build phase.
 
 We'll begin with the `producer` application.  Change to the `producer` directory:
