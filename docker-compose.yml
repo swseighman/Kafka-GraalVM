@@ -16,15 +16,6 @@ services:
       depends_on:
         - zookeeper
 
-    jmxexporter:
-      image: sscaling/jmx-prometheus-exporter
-      ports:
-        - "5556:5556"
-      environment:
-        SERVICE_PORT: 5556
-      volumes:
-        - $PWD/kafka-2_0_0.yml:/opt/jmx_exporter/config.yml
-
     zookeeper:
       image: wurstmeister/zookeeper
       ports:
